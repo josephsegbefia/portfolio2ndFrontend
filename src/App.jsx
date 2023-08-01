@@ -2,7 +2,9 @@ import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
+import Login from "./components/auth/Login";
 import About from "./components/About";
+import Footer from "./components/Footer";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -14,7 +16,9 @@ function App() {
         <hr className="h-px my-0.5 bg-gray-200 border-0 dark:bg-gray-700" />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
+        <Footer />
       </main>
     </div>
   );
