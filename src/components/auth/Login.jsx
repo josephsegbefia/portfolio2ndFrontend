@@ -1,14 +1,17 @@
 import React from "react";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/auth.context";
 
 const API_URL = "http://localhost:1337";
+
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
+  const { storeToken, authenticateAdmin } = useContext(AuthContext);
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -26,7 +29,9 @@ const Login = () => {
     axios
       .post(`${API_URL}/login`, requestBody)
       .then((response) => {
-        console.log("Token:", response.data);
+        // console.log("Token:", response.data.token);
+        storeToken(response.data.token);
+        authenticateAdmin();
         navigate("/dashboard");
       })
       .catch((error) => {
