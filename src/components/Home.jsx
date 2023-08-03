@@ -124,20 +124,22 @@ const Home = () => {
       </Section>
       <br />
 
-      <div class="min-w-fit p-4 flex flex-col justify-start items-center py-16 px-5 text-center shadow-lg dark:shadow-gray-100 rounded-xl duration-300 ease-in-out hover:scale-110">
-        <h5 class="mb-2 text-3xl font-bold">Learn More About me</h5>
-        <p class="mb-5 text-base">
+      <div className="min-w-fit p-4 flex flex-col justify-start items-center py-16 px-5 text-center shadow-lg dark:shadow-gray-100 rounded-xl duration-300 ease-in-out hover:scale-110">
+        <h5 className="mb-2 text-3xl font-bold">Learn More About me</h5>
+        <p className="mb-5 text-base">
           Thank you for remaining on the page so far. Get to know me some by
           clicking on the button below. Thank you
         </p>
-        <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+        <div className="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
           <Link
             to="/about"
-            class="w-full sm:w-auto  hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700"
+            className="w-full sm:w-auto  hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700"
           >
-            <div class="text-left">
-              <div class="mb-1 text-xs">Know More</div>
-              <div class="-mt-1 font-sans text-sm font-semibold">About Me</div>
+            <div className="text-left">
+              <div className="mb-1 text-xs">Know More</div>
+              <div className="-mt-1 font-sans text-sm font-semibold">
+                About Me
+              </div>
             </div>
           </Link>
         </div>

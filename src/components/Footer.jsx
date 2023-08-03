@@ -23,10 +23,13 @@ const Footer = () => {
         </>
       )}
 
+      <br />
+      <br />
+
       {!isAdminLoggedIn && (
         <>
           <Link to={"/login"} className="max-w-xl font-light text">
-            Log In
+            Admin Log In
           </Link>
         </>
       )}

@@ -7,13 +7,13 @@ const AuthContext = React.createContext();
 function AuthProviderWrapper(props) {
   const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [admin, setAdmin] = useState(null);
+  const [user, setUser] = useState(null);
 
   const storeToken = (token) => {
     localStorage.setItem("authToken", token);
   };
 
-  const authenticateAdmin = () => {
+  const authenticateUser = () => {
     const storedToken = localStorage.getItem("authToken");
 
     if (storedToken) {
@@ -25,17 +25,17 @@ function AuthProviderWrapper(props) {
           const admin = response.data;
           setIsAdminLoggedIn(true);
           setIsLoading(false);
-          setAdmin(admin);
+          setUser(admin);
         })
         .catch((error) => {
           setIsAdminLoggedIn(false);
           setIsLoading(false);
-          setAdmin(null);
+          setUser(null);
         });
     } else {
       setIsAdminLoggedIn(false);
       setIsLoading(false);
-      setAdmin(null);
+      setUser(null);
     }
   };
 
@@ -43,13 +43,13 @@ function AuthProviderWrapper(props) {
     localStorage.removeItem("authToken");
   };
 
-  const logOutAdmin = () => {
+  const logOutUser = () => {
     removeToken();
     authenticateAdmin();
   };
 
   useEffect(() => {
-    authenticateAdmin();
+    authenticateUser();
   }, []);
 
   return (
@@ -57,10 +57,10 @@ function AuthProviderWrapper(props) {
       value={{
         isAdminLoggedIn,
         isLoading,
-        admin,
+        user,
         storeToken,
-        authenticateAdmin,
-        logOutAdmin
+        authenticateUser,
+        logOutUser
       }}
     >
       {props.children}
