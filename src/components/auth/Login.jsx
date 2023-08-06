@@ -4,17 +4,17 @@ import { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/auth.context";
 
-const API_URL = "http://localhost:1337";
+const API_URL = "http://localhost:5005";
 
 const Login = () => {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
-  const { storeToken, authenticateAdmin } = useContext(AuthContext);
+  const { storeToken, authenticateUser } = useContext(AuthContext);
 
-  const handleUsernameChange = (e) => {
-    setUsername(e.target.value);
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
   };
 
   const handlePasswordChange = (e) => {
@@ -24,14 +24,14 @@ const Login = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    const requestBody = { username, password };
+    const requestBody = { email, password };
 
     axios
-      .post(`${API_URL}/login`, requestBody)
+      .post(`${API_URL}/auth/login`, requestBody)
       .then((response) => {
-        // console.log("Token:", response.data.token);
-        storeToken(response.data.token);
-        authenticateAdmin();
+        console.log("Token:", response.data.authToken);
+        storeToken(response.data.authToken);
+        authenticateUser();
         navigate("/dashboard");
       })
       .catch((error) => {
@@ -44,13 +44,13 @@ const Login = () => {
         <div className="gap-4 w-full mt-80">
           <div className="flex flex-col my-2">
             <label className="capitalize text-sm py-2 font-extralight">
-              username
+              email
             </label>
             <input
               type="text"
-              name="username"
+              name="email"
               className="border-2 rounded-lg p-3 flex focus:outline-none border-gray-400 dark:bg-gray-900 dark:text-white"
-              onChange={handleUsernameChange}
+              onChange={handleEmailChange}
             />
           </div>
           <div className="flex flex-col my-2">

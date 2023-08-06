@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../context/auth.context";
 
 const Footer = () => {
-  const { isAdminLoggedIn, admin, logOutAdmin } = useContext(AuthContext);
+  const { isAdminLoggedIn, user, logOutUser } = useContext(AuthContext);
   return (
     <section className="min-h-fit flex flex-col justify-start items-center py-16 px-5 text-center">
       <p className="max-w-xl font-light text">
@@ -14,7 +14,7 @@ const Footer = () => {
       {isAdminLoggedIn && (
         <>
           <Link
-            onClick={logOutAdmin}
+            onClick={logOutUser}
             to={"/"}
             className="max-w-xl font-light text"
           >
