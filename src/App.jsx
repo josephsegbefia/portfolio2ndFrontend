@@ -7,6 +7,8 @@ import Signup from "./components/auth/Signup";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Dashboard from "./components/Dashboard";
+import IsAnon from "./IsAnon";
+import isPrivate from "./components/IsPrivate";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -18,9 +20,23 @@ function App() {
         <hr className="h-px my-0.5 bg-gray-200 border-0 dark:bg-gray-700" />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
+          <Route
+            path="/login"
+            element={
+              <IsAnon>
+                <Login />
+              </IsAnon>
+            }
+          />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route
+            path="/signup"
+            element={
+              <IsAnon>
+                <Signup />
+              </IsAnon>
+            }
+          />
         </Routes>
         <Footer />
       </main>
