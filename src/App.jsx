@@ -37,6 +37,7 @@ function App() {
               </IsAnon>
             }
           />
+          <Route path="/about" element={<About />} />
         </Routes>
         <Footer />
       </main>
