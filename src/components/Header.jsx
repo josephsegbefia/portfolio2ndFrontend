@@ -12,7 +12,7 @@ const Header = ({ darkMode, setDarkMode }) => {
   };
 
   return (
-    <nav className="bg-white dark:bg-gray-900 text-gray-900 dark:text-teal-500 fixed w-full">
+    <nav className="bg-white dark:bg-gray-900 text-gray-900 dark:text-teal-500  w-full">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <h1 className="text-lg">Joseph Segbefia</h1>
         <div className="flex md:order-2">
