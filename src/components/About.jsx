@@ -65,40 +65,78 @@ const About = () => {
               May 2023 - July 2023
             </time>
             <h3 className="text-lg font-semibold">Ironhack, Berlin</h3>
-            <h6 className="text-lg font-semibold text-gray-500 dark:text-gray-500">
-              Intensive 9-week web development bootcamp
-            </h6>
+            <h5 className="text-lg font-semibold text-gray-500 dark:text-gray-500">
+              Full Stack Web Development
+            </h5>
             <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-              Get access to over 20+ pages including a dashboard layout, charts,
-              kanban board, calendar, and pre-order E-commerce & Marketing
-              pages.
+              9-week intensive web development boot camp. <br />
+              - Frontend technologies learned: HTML, CSS, JavaScript (ES6),
+              ReactJS <br />- Backend technologies learned: ExpressJS, NodeJS,
+              MongoDB, Axios <br />
+              -Version Control: Git | GitHub
+            </p>
+            <h6 className="text-lg font-semibold text-gray-500 dark:text-gray-500">
+              Skills
+            </h6>
+            <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+              HTML5 · Cascading Style Sheets (CSS) · React.js · Express.js ·
+              Node.js · MongoDB · JavaScript · Git/GitHub · REST APIs
             </p>
           </li>
           <li className="mb-10 ml-4">
             <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
             <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-              March 2022
+              May 2022 - Present
             </time>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-              Marketing UI design in Figma
+            <h3 className="text-lg font-semibold">
+              Hive Technologies GmbH, Rangsdorf
             </h3>
+            <h5 className="text-lg font-semibold text-gray-500 dark:text-gray-500">
+              Operations Assistant
+            </h5>
             <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-              All of the pages and components are first designed in Figma and we
-              keep a parity between the two versions even as we update the
-              project.
+              - Identifying operational requirements and opportunities for
+              improvement. <br />
+              - Determining appropriate methods to analyze operations,relevant
+              information, and data. <br />- Developing new processes and
+              procedures to enhance operations. <br />- Using data to understand
+              client needs and ensuring they are met
+            </p>
+
+            <h6 className="text-lg font-semibold text-gray-500 dark:text-gray-500">
+              Skills
+            </h6>
+            <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+              MetaBase · Time Management · Multitasking · Communication · Data
+              Analysis
             </p>
           </li>
           <li className="ml-4">
             <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
             <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-              April 2022
+              October 2020 - October 2021
             </time>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-              E-Commerce UI code in Tailwind CSS
+            <h3 className="text-lg font-semibold">
+              University of Law, GISMA Business School Campus, Berlin
             </h3>
+            <h5 className="text-lg font-semibold text-gray-500 dark:text-gray-500">
+              MSc. Business Intelligence and Analytics
+            </h5>
             <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-              Get started with dozens of web components and interactive elements
-              built on top of Tailwind CSS.
+              A masters' degree course offered by the University of Law, but
+              delivered at the GISMA Business School Campus, Berlin. <br />
+              Course Work <br />
+              - Data Discovery & Visualization <br />
+              - Data Driven Decision Making <br />
+              - Predictive Analytics <br />
+              - Financial Technologies <br />
+            </p>
+
+            <h6 className="text-lg font-semibold text-gray-500 dark:text-gray-500">
+              Skills
+            </h6>
+            <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+              Python · Tableau · SQL
             </p>
           </li>
         </ol>
