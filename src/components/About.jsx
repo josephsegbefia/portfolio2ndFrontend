@@ -111,7 +111,7 @@ const About = () => {
               Analysis
             </p>
           </li>
-          <li className="ml-4">
+          <li className="mb-10 ml-4">
             <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
             <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
               October 2020 - October 2021
@@ -137,6 +137,29 @@ const About = () => {
             </h6>
             <p className="text-base font-normal text-gray-500 dark:text-gray-400">
               Python · Tableau · SQL
+            </p>
+          </li>
+          <li className="mb-10 ml-4">
+            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+            <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+              November 2020 - November 2021
+            </time>
+            <h3 className="text-lg font-semibold">Codecademy</h3>
+            <h5 className="text-lg font-semibold text-gray-500 dark:text-gray-500">
+              Full-stack Engineer Path
+            </h5>
+            <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+              - Learned to build web applications from start to finish. <br />-
+              Started with the front-end, moved to the back-end, then connected
+              the two.
+            </p>
+
+            <h6 className="text-lg font-semibold text-gray-500 dark:text-gray-500">
+              Skills
+            </h6>
+            <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+              HTML · CSS · Databases · React.js · Node.js · Express.js · Redux ·
+              Version Control · MongoDB · APIs
             </p>
           </li>
         </ol>
