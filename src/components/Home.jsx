@@ -50,9 +50,7 @@ const Home = () => {
   ];
   return (
     <section className="min-h-screen flex flex-col justify-start items-center p-4 text-center mt-40">
-      <h2 className="text-5xl text-tomato-600 font-bold uppercase">
-        Joseph Segbefia
-      </h2>
+      <h2 className="text-5xl font-bold uppercase">Joseph Segbefia</h2>
       <h3 className="py-3 text-2xl">{profile.headLine}</h3>
       <p className="max-w-xl font-light text-gray-500 dark:text-white">
         Hello, you are warmly welcome to my portfolio. I am a full stack
