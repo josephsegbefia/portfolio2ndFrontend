@@ -6,11 +6,11 @@ import Login from "./components/auth/Login";
 import Signup from "./components/auth/Signup";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
+import Dashboard from "./components/Dashboard";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Dashboard from "./components/Dashboard";
-import IsAnon from "./IsAnon";
-import isPrivate from "./components/IsPrivate";
+import IsAnon from "./components/IsAnon";
+import IsPrivate from "./components/IsPrivate";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -30,7 +30,6 @@ function App() {
               </IsAnon>
             }
           />
-          <Route path="/dashboard" element={<Dashboard />} />
           <Route
             path="/signup"
             element={
@@ -42,6 +41,14 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route
+            path="/dashboard"
+            element={
+              <IsPrivate>
+                <Dashboard />
+              </IsPrivate>
+            }
+          />
         </Routes>
         <Footer />
       </main>

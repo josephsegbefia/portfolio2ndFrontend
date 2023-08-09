@@ -32,7 +32,7 @@ const Login = () => {
         console.log("Token:", response.data.authToken);
         storeToken(response.data.authToken);
         authenticateUser();
-        navigate("/dashboard");
+        navigate("/portfolio");
       })
       .catch((error) => {
         console.log(error);
