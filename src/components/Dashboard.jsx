@@ -19,6 +19,10 @@ const Dashboard = () => {
     setActiveButton("messages");
   };
 
+  const openJobsTable = () => {
+    setActiveButton("jobs");
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       {activeButton === "create" ? (
@@ -36,11 +40,15 @@ const Dashboard = () => {
           <MessagesList />
           <button onClick={() => setActiveButton(null)}>Cancel</button>
         </>
+      ) : activeButton === "jobs" ? (
+        <>
+          <button onClick={() => setActiveButton(null)}>Cancel</button>
+        </>
       ) : (
         <>
           <button
             type="button"
-            className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 m-10"
+            className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5  mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 m-10"
             onClick={openCreateForm}
           >
             + Create Project
@@ -48,16 +56,24 @@ const Dashboard = () => {
           <button
             type="button"
             onClick={openProjectsTable}
-            className="focus:outline-none text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 m-10"
+            className="focus:outline-none text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 m-10"
           >
             View Projects
           </button>
           <button
             type="button"
             onClick={openMessagesTable}
-            className="focus:outline-none text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 m-10"
+            className="focus:outline-none text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 m-10"
           >
             View Messages
+          </button>
+
+          <button
+            type="button"
+            onClick={openJobsTable}
+            className="focus:outline-none text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 m-10"
+          >
+            View Jobs
           </button>
         </>
       )}
