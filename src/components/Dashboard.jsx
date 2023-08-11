@@ -26,6 +26,19 @@ const Dashboard = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <div className="grid gap-10 lg:grid-cols-3">
+        <div className="flex flex-col items-center justify-center p-5 rounded-xl outline-teal-600 ">
+          <h1>Hello</h1>
+        </div>
+
+        <div className="flex flex-col items-center justify-center p-5 rounded-xl outline-teal-600 ">
+          <h1>Hello</h1>
+        </div>
+
+        <div className="flex flex-col items-center justify-center p-5 rounded-xl outline-teal-600 ">
+          <h1>Hello</h1>
+        </div>
+      </div>
       {activeButton === "create" ? (
         <>
           <CreateProject />
