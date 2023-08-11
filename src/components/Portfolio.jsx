@@ -1,68 +1,23 @@
 import React from "react";
 import Section from "./common/Section";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
+const API_URL = "http://localhost:5005";
 const Portfolio = () => {
   const [index, setIndex] = useState(0);
+  const [projects, setProjects] = useState([]);
 
-  const projects = [
-    {
-      id: 1,
-      projectName: "First Project",
-      description: "Web Development",
-      techs: ["React", "Express", "Node"],
-      imageUrl: ""
-    },
-    {
-      id: 2,
-      projectName: "Second Project",
-      description: "Web Development",
-      techs: ["React", "Express", "Node"],
-      imageUrl: ""
-    },
-    {
-      id: 3,
-      projectName: "Third Project",
-      description: "Web Development",
-      techs: ["React", "Express", "Node"],
-      imageUrl: ""
-    },
-    {
-      id: 4,
-      projectName: "Forth Project",
-      description: "Web Development",
-      techs: ["React", "Express", "Node"],
-      imageUrl: ""
-    },
-    {
-      id: 5,
-      projectName: "First Project",
-      description: "Web Development",
-      techs: ["React", "Express", "Node"],
-      imageUrl: ""
-    },
-    {
-      id: 6,
-      projectName: "Second Project",
-      description: "Web Development",
-      techs: ["React", "Express", "Node"],
-      imageUrl: ""
-    },
-    {
-      id: 7,
-      projectName: "Third Project",
-      description: "Web Development",
-      techs: ["React", "Express", "Node"],
-      imageUrl: ""
-    },
-    {
-      id: 8,
-      projectName: "Forth Project",
-      description: "Web Development",
-      techs: ["React", "Express", "Node"],
-      imageUrl: ""
-    }
-  ];
+  useEffect(() => {
+    axios
+      .get(`${API_URL}/api/projects`)
+      .then((response) => {
+        setProjects(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [index]);
 
   const chunk = chunkArray(projects, 6);
   const [projectsGroup, setProjectsGroup] = useState(chunk[0]);
@@ -91,21 +46,12 @@ const Portfolio = () => {
   return (
     <Section title="Portfolio 🗒️" subtitle="Have a look at some of my projects">
       <div className="grid gap-10 lg:grid-cols-3">
-        {projectsGroup.map(
-          ({ id, projectName, description, techs, imageUrl }, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center justify-center p-5 shadow-lg dark:shadow-gray-100 rounded-xl duration-300 ease-in-out hover:scale-110"
-            >
-              <img
-                src={imageUrl}
-                alt={projectName}
-                className="w-36 h-36 md:w-44 object-contain"
-              />
-              <h3 className="mt-5 text-base">{projectName}</h3>
-            </div>
-          )
-        )}
+        {projectsGroup &&
+          projectsGroup.map(
+            ({ id, projectName, description, techs, imageUrl }, index) => (
+              <h1>Hello</h1>
+            )
+          )}
       </div>
       <div className="mt-20">
         <button

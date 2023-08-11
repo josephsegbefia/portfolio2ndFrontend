@@ -11,6 +11,8 @@ const CreateProject = () => {
 
   const [projectName, setProjectName] = useState("");
   const [description, setDescription] = useState("");
+  const [githubUrl, setGithubUrl] = useState("");
+  const [demoLink, setDemoLink] = useState("");
   const [imageUrl, setImageUrl] = useState("");
 
   const navigate = useNavigate();
@@ -31,6 +33,14 @@ const CreateProject = () => {
 
   const handleDescriptionChange = (e) => {
     setDescription(e.target.value);
+  };
+
+  const handleGitHubChange = (e) => {
+    setGithubUrl(e.target.value);
+  };
+
+  const handleDemoLinkChange = (e) => {
+    setDemoLink(e.target.value);
   };
 
   const handleFileUpload = (e) => {
@@ -112,6 +122,7 @@ const CreateProject = () => {
                 onChange={handleTechChange}
               />
             </div>
+
             <div>
               <button
                 type="button"
@@ -130,6 +141,30 @@ const CreateProject = () => {
                   </p>
                 ))}
             </div>
+          </div>
+          <div className="flex flex-col my-2">
+            <label className="capitalize text-sm py-2 font-extralight">
+              gihub link
+            </label>
+            <input
+              type="text"
+              name="githubUrl"
+              className="border-2 rounded-lg p-3 flex focus:outline-none border-gray-400 dark:bg-gray-900 dark:text-white"
+              value={githubUrl}
+              onChange={handleGitHubChange}
+            />
+          </div>
+          <div className="flex flex-col my-2">
+            <label className="capitalize text-sm py-2 font-extralight">
+              demo link
+            </label>
+            <input
+              type="text"
+              name="demoLink"
+              className="border-2 rounded-lg p-3 flex focus:outline-none border-gray-400 dark:bg-gray-900 dark:text-white"
+              value={demoLink}
+              onChange={handleDemoLinkChange}
+            />
           </div>
 
           <div className="flex flex-col my-2">
