@@ -66,6 +66,8 @@ const CreateProject = () => {
       projectName,
       description,
       imageUrl,
+      demoLink,
+      githubUrl,
       techs: techReceived
     };
 
@@ -81,6 +83,8 @@ const CreateProject = () => {
     setProjectName("");
     setDescription("");
     setImageUrl("");
+    setDemoLink("");
+    setGithubUrl("");
     setTechReceived([]);
   };
 
