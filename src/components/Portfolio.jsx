@@ -3,6 +3,7 @@ import Section from "./common/Section";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { FaGithub, FaExternalLinkSquareAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const API_URL = "http://localhost:5005";
 const Portfolio = () => {
@@ -88,6 +89,7 @@ const Portfolio = () => {
                     <FaExternalLinkSquareAlt />
                   </a>
                 </div>
+                <Link to={`/projects/${_id}`}>View Details</Link>
               </div>
             )
           )}

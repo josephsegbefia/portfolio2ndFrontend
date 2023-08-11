@@ -6,6 +6,7 @@ import Login from "./components/auth/Login";
 import Signup from "./components/auth/Signup";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
+import ProjectDetails from "./components/ProjectDetails";
 import Dashboard from "./components/Dashboard";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -49,6 +50,7 @@ function App() {
               </IsPrivate>
             }
           />
+          <Route path={`projects/:projectId`} element={<ProjectDetails />} />
         </Routes>
         <Footer />
       </main>
