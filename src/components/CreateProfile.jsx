@@ -11,7 +11,8 @@ const CreateProfile = () => {
             upload picture
           </label>
           <input type="file" />
-          <div className="gap-4 w-full">
+
+          <div className="grid gap-4 grid-cols-2">
             <div className="flex flex-col my-2">
               <label className="capitalize text-sm py-2 font-extralight">
                 first name
@@ -21,16 +22,18 @@ const CreateProfile = () => {
                 className="border-2 rounded-lg p-3 flex focus:outline-none border-gray-400 dark:bg-gray-900 dark:text-white"
               />
             </div>
+
+            <div className="flex flex-col my-2">
+              <label className="capitalize text-sm py-2 font-extralight">
+                last name
+              </label>
+              <input
+                type="text"
+                className="border-2 rounded-lg p-3 flex focus:outline-none border-gray-400 dark:bg-gray-900 dark:text-white"
+              />
+            </div>
           </div>
-          <div className="flex flex-col my-2">
-            <label className="capitalize text-sm py-2 font-extralight">
-              last name
-            </label>
-            <input
-              type="text"
-              className="border-2 rounded-lg p-3 flex focus:outline-none border-gray-400 dark:bg-gray-900 dark:text-white"
-            />
-          </div>
+
           <div className="flex flex-col my-2">
             <label className="capitalize text-sm py-2 font-extralight">
               headline
@@ -40,51 +43,57 @@ const CreateProfile = () => {
               className="border-2 rounded-lg p-3 flex focus:outline-none border-gray-400 dark:bg-gray-900 dark:text-white"
             />
           </div>
-          <div className="flex flex-col my-2">
-            <label className="capitalize text-sm py-2 font-extralight">
-              email
-            </label>
-            <input
-              type="text"
-              className="border-2 rounded-lg p-3 flex focus:outline-none border-gray-400 dark:bg-gray-900 dark:text-white"
-            />
+          <div className="grid gap-4 grid-cols-2">
+            <div className="flex flex-col my-2">
+              <label className="capitalize text-sm py-2 font-extralight">
+                email
+              </label>
+              <input
+                type="text"
+                className="border-2 rounded-lg p-3 flex focus:outline-none border-gray-400 dark:bg-gray-900 dark:text-white"
+              />
+            </div>
+            <div className="flex flex-col my-2">
+              <label className="capitalize text-sm py-2 font-extralight">
+                phone
+              </label>
+              <input
+                type="text"
+                className="border-2 rounded-lg p-3 flex focus:outline-none border-gray-400 dark:bg-gray-900 dark:text-white"
+              />
+            </div>
           </div>
-          <div className="flex flex-col my-2">
-            <label className="capitalize text-sm py-2 font-extralight">
-              phone
-            </label>
-            <input
-              type="text"
-              className="border-2 rounded-lg p-3 flex focus:outline-none border-gray-400 dark:bg-gray-900 dark:text-white"
-            />
+
+          <div className="grid gap-4 grid-cols-2">
+            <div className="flex flex-col my-2">
+              <label className="capitalize text-sm py-2 font-extralight">
+                linkedin url
+              </label>
+              <input
+                type="text"
+                className="border-2 rounded-lg p-3 flex focus:outline-none border-gray-400 dark:bg-gray-900 dark:text-white"
+              />
+            </div>
+            <div className="flex flex-col my-2">
+              <label className="capitalize text-sm py-2 font-extralight">
+                github url
+              </label>
+              <input
+                type="text"
+                className="border-2 rounded-lg p-3 flex focus:outline-none border-gray-400 dark:bg-gray-900 dark:text-white"
+              />
+            </div>
           </div>
-          <div className="flex flex-col my-2">
-            <label className="capitalize text-sm py-2 font-extralight">
-              linkedin url
-            </label>
-            <input
-              type="text"
-              className="border-2 rounded-lg p-3 flex focus:outline-none border-gray-400 dark:bg-gray-900 dark:text-white"
-            />
-          </div>
-          <div className="flex flex-col my-2">
-            <label className="capitalize text-sm py-2 font-extralight">
-              github url
-            </label>
-            <input
-              type="text"
-              className="border-2 rounded-lg p-3 flex focus:outline-none border-gray-400 dark:bg-gray-900 dark:text-white"
-            />
-          </div>
+
           <div className="grid grid-cols-2">
             <div>
               <label className="capitalize text-sm py-2 font-extralight">
-                techs
+                Skills
               </label>
               <input
                 type="text"
                 name="techs"
-                placeholder="Add technologies used one after the other and press the  + button after each add"
+                placeholder="Add the skills you have one after the other and press the  + button after each add"
                 className="border-2 rounded-lg p-3 flex focus:outline-none border-gray-400 dark:bg-gray-900 dark:text-white w-full"
                 value={""}
                 onChange={""}
@@ -101,7 +110,7 @@ const CreateProfile = () => {
               </button>
             </div>
             <div className="flex w-full">
-              Added Techs:
+              Added Skills:
               {/* {techReceived &&
                 techReceived.map((tech, index) => (
                   <p
