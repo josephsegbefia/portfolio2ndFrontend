@@ -13,6 +13,7 @@ const EditProject = () => {
   const [githubUrl, setGithubUrl] = useState("");
   const [demoLink, setDemoLink] = useState("");
   const [techs, setTechs] = useState([]);
+  const [tech, setTech] = useState("");
   const [imageUrl, setImageUrl] = useState("");
 
   const navigate = useNavigate();
@@ -24,9 +25,20 @@ const EditProject = () => {
       setDescription(response.data.description);
       setDemoLink(response.data.demoLink);
       setGithubUrl(response.data.githubUrl);
+      setTechs(response.data.techs);
       console.log(response.data);
     });
   }, [projectId]);
+
+  const addTech = () => {
+    const techToSave = tech;
+    setTechs([...techs, techToSave]);
+    setTech("");
+  };
+
+  const handleTechChange = (e) => {
+    setTech(e.target.value);
+  };
 
   const handleProjectNameChange = (e) => {
     setProjectName(e.target.value);
@@ -37,9 +49,35 @@ const EditProject = () => {
   const handleDescriptionChange = (e) => {
     setDescription(e.target.value);
   };
-  const handleGitHubChange = () => {};
+  const handleGitHubChange = (e) => {
+    setGithubUrl(e.target.value);
+  };
 
-  const handleSubmit = () => {};
+  const removeTech = (index) => {
+    const updatedTechs = techs.filter((_, i) => i !== index);
+    setTechs(updatedTechs);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const requestBody = {
+      projectName,
+      description,
+      githubUrl,
+      demoLink,
+      techs
+    };
+    axios
+      .put(`${API_URL}/api/projects/${projectId}`, requestBody)
+      .then((response) => {
+        console.log(response.data);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <div className="p-8 text-left w-full">
@@ -70,11 +108,11 @@ const EditProject = () => {
               </label>
               <input
                 type="text"
-                name="techs"
+                name="tech"
                 placeholder="Add technologies used one after the other and press the  + button after each add"
                 className="border-2 rounded-lg p-3 flex focus:outline-none border-gray-400 dark:bg-gray-900 dark:text-white w-full"
-                // value={tech}
-                // onChange={handleTechChange}
+                value={tech}
+                onChange={handleTechChange}
               />
             </div>
 
@@ -82,7 +120,7 @@ const EditProject = () => {
               <button
                 type="button"
                 className="focus:outline-none text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 m-8 w-1/2 justify-center"
-                // onClick={addTech}
+                onClick={addTech}
               >
                 +
               </button>
@@ -91,9 +129,17 @@ const EditProject = () => {
               Added Techs:
               {techs &&
                 techs.map((tech, index) => (
-                  <p style={{ color: "teal", marginLeft: "8px" }} key={index}>
+                  <li
+                    key={index}
+                    onClick={() => removeTech(index)}
+                    style={{
+                      color: "teal",
+                      cursor: "pointer",
+                      marginLeft: "8px"
+                    }}
+                  >
                     {tech}
-                  </p>
+                  </li>
                 ))}
             </div>
           </div>
