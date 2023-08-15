@@ -26,7 +26,7 @@ const About = () => {
     gitHubUrl: "https://github.com/josephsegbefia"
   };
   return (
-    <div className="min-h-screen">
+    <div>
       <section className="flex flex-col justify-start items-center p-4 text-center">
         <h2 className="text-5xl font-bold uppercase">Joseph Segbefia</h2>
         <h3 className="py-3 text-2xl">{profile.headLine}</h3>
@@ -80,15 +80,15 @@ const About = () => {
         My Journey through time
       </h3>
       <br />
-      <section className="flex flex-col justify-start items-center p-4">
-        <ol className="relative border-l border-gray-200 dark:border-gray-700">
+      <section className="flex flex-col justify-start p-6">
+        <ol className="relative border-l border-gray-200 dark:border-gray-700 p-4">
           <li className="mb-10 ml-4">
             <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
             <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
               May 2023 - July 2023
             </time>
             <h3 className="text-lg font-semibold">Ironhack, Berlin</h3>
-            <h5 className="text-lg font-semibold text-gray-500 dark:text-gray-500">
+            <h5 className="font-semibold text-gray-500 dark:text-gray-500">
               Full Stack Web Development
             </h5>
             <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
@@ -106,6 +106,7 @@ const About = () => {
               Node.js · MongoDB · JavaScript · Git/GitHub · REST APIs
             </p>
           </li>
+          <br />
           <li className="mb-10 ml-4">
             <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
             <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
@@ -114,7 +115,7 @@ const About = () => {
             <h3 className="text-lg font-semibold">
               Hive Technologies GmbH, Rangsdorf
             </h3>
-            <h5 className="text-lg font-semibold text-gray-500 dark:text-gray-500">
+            <h5 className="font-semibold text-gray-500 dark:text-gray-500">
               Operations Assistant
             </h5>
             <p className="text-base font-normal text-gray-500 dark:text-gray-400">
@@ -134,6 +135,7 @@ const About = () => {
               Analysis
             </p>
           </li>
+          <br />
           <li className="mb-10 ml-4">
             <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
             <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
@@ -142,7 +144,7 @@ const About = () => {
             <h3 className="text-lg font-semibold">
               University of Law, GISMA Business School Campus, Berlin
             </h3>
-            <h5 className="text-lg font-semibold text-gray-500 dark:text-gray-500">
+            <h5 className="font-semibold text-gray-500 dark:text-gray-500">
               MSc. Business Intelligence and Analytics
             </h5>
             <p className="text-base font-normal text-gray-500 dark:text-gray-400">
@@ -162,13 +164,14 @@ const About = () => {
               Python · Tableau · SQL
             </p>
           </li>
+          <br />
           <li className="mb-10 ml-4">
             <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
             <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
               November 2020 - November 2021
             </time>
             <h3 className="text-lg font-semibold">Codecademy</h3>
-            <h5 className="text-lg font-semibold text-gray-500 dark:text-gray-500">
+            <h5 className="font-semibold text-gray-500 dark:text-gray-500">
               Full-stack Engineer Path
             </h5>
             <p className="text-base font-normal text-gray-500 dark:text-gray-400">
@@ -185,14 +188,14 @@ const About = () => {
               Version Control · MongoDB · APIs
             </p>
           </li>
-
+          <br />
           <li className="mb-10 ml-4">
             <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
             <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
               September 2019 - October 2020
             </time>
             <h3 className="text-lg font-semibold">DataCamp</h3>
-            <h5 className="text-lg font-semibold text-gray-500 dark:text-gray-500">
+            <h5 className="font-semibold text-gray-500 dark:text-gray-500">
               Data Scientist with Python
             </h5>
             <p className="text-base font-normal text-gray-500 dark:text-gray-400">
