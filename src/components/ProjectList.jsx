@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import moment from "moment";
+import { Link, useParams } from "react-router-dom";
 
 import { useState, useEffect } from "react";
 
@@ -45,9 +46,9 @@ const ProjectList = () => {
             </tr>
           </thead>
           <tbody>
-            {projects.map(({ projectName, description, createdAt }, i) => (
+            {projects.map(({ projectName, description, createdAt, _id }) => (
               <tr
-                key={i}
+                key={_id}
                 className="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
               >
                 <th
@@ -68,6 +69,14 @@ const ProjectList = () => {
                   >
                     View
                   </a>
+                </td>
+                <td className="px-6 py-4">
+                  <Link
+                    to={`projects/${_id}/edit`}
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                  >
+                    Edit
+                  </Link>
                 </td>
               </tr>
             ))}

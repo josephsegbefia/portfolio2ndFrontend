@@ -8,6 +8,7 @@ import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import ProjectDetails from "./components/ProjectDetails";
 import Dashboard from "./components/Dashboard";
+import EditProject from "./components/EditProject";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import IsAnon from "./components/IsAnon";
@@ -51,6 +52,10 @@ function App() {
             }
           />
           <Route path={`projects/:projectId`} element={<ProjectDetails />} />
+          <Route
+            path={`dashboard/projects/:projectId/edit`}
+            element={<EditProject />}
+          />
         </Routes>
         <Footer />
       </main>
