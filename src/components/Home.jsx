@@ -13,28 +13,6 @@ const API_URL = "http://localhost:5005";
 
 const Home = () => {
   const [profile, setProfile] = useState([]);
-  // const profile = {
-  //   firstName: "Joseph",
-  //   lastName: "Segbefia",
-  //   headLine: "Full Stack Developer",
-  //   email: "elsegbefia@gmail.com",
-  //   phone: "+491636966417",
-  //   avatarUrl: "",
-  //   skills: [
-  //     "JavaScript (ES6/7)",
-  //     "NodeJS",
-  //     "ExpressJS",
-  //     "ReactJS",
-  //     "MongoDB",
-  //     "HTML",
-  //     "CSS",
-  //     "Python",
-  //     "Machine Learning",
-  //     "Data Analysis"
-  //   ],
-  //   linkedInUrl: "https://www.linkedin.com/in/joseph-segbefia",
-  //   gitHubUrl: "https://github.com/josephsegbefia"
-  // };
 
   useEffect(() => {
     axios
