@@ -23,6 +23,18 @@ const Footer = () => {
         </>
       )}
 
+      {isAdminLoggedIn && (
+        <>
+          <Link
+            // onClick={logOutUser}
+            to={"/dashboard"}
+            className="max-w-xl font-light text"
+          >
+            Dashboard
+          </Link>
+        </>
+      )}
+
       <br />
       <br />
 

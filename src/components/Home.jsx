@@ -9,7 +9,7 @@ import mobile from "../assets/mobile.png";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const API_URL = "http://localhost:5005";
+const API_URL = "https://portfolioserver-u082.onrender.com";
 
 const Home = () => {
   const [profile, setProfile] = useState([]);

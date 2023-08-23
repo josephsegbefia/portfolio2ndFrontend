@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { FaGithub, FaExternalLinkSquareAlt } from "react-icons/fa";
-const API_URL = "http://localhost:5005";
+const API_URL = "https://portfolioserver-u082.onrender.com";
 const ProjectDetails = () => {
   const [project, setProject] = useState([]);
 

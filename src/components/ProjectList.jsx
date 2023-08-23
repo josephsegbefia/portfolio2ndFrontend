@@ -6,7 +6,7 @@ import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 moment().format();
-const API_URL = "http://localhost:5005";
+const API_URL = "https://portfolioserver-u082.onrender.com";
 
 const ProjectList = () => {
   const [projects, setProjects] = useState([]);

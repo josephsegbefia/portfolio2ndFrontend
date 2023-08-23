@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-const API_URL = "http://localhost:5005";
+const API_URL = "https://portfolioserver-u082.onrender.com";
 
 const About = () => {
   const [profile, setProfile] = useState([]);

@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const API_URL = "http://localhost:5005";
+const API_URL = "https://portfolioserver-u082.onrender.com";
 
 const CreateProject = () => {
   const [techReceived, setTechReceived] = useState([]);
