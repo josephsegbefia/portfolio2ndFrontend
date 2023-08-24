@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-const API_URL = "https://portfolioserver-u082.onrender.com";
+const API_URL = "https://serverportfolio.onrender.com";
 
 const EditProject = () => {
   const [project, setProject] = useState("");

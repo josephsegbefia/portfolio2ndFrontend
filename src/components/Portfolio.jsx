@@ -5,7 +5,7 @@ import axios from "axios";
 import { FaGithub, FaExternalLinkSquareAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const API_URL = "https://portfolioserver-u082.onrender.com";
+const API_URL = "https://serverportfolio.onrender.com";
 const Portfolio = () => {
   const [index, setIndex] = useState(0);
   const [projects, setProjects] = useState([]);

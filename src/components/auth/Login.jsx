@@ -4,7 +4,7 @@ import { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/auth.context";
 
-const API_URL = "https://portfolioserver-u082.onrender.com";
+const API_URL = "https://serverportfolio.onrender.com";
 
 const Login = () => {
   const [email, setEmail] = useState("");

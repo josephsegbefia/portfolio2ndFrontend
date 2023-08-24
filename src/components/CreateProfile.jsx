@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const API_URL = "https://portfolioserver-u082.onrender.com";
+const API_URL = "https://serverportfolio.onrender.com";
 
 const CreateProfile = () => {
   const [skillReceived, setSkillReceived] = useState([]);

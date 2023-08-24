@@ -5,7 +5,7 @@ import contact from "../assets/mobile.png";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const API_URL = "https://portfolioserver-u082.onrender.com";
+const API_URL = "https://serverportfolio.onrender.com";
 
 const Contact = () => {
   const [name, setName] = useState("");
