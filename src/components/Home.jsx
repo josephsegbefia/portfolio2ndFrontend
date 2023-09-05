@@ -43,6 +43,7 @@ const Home = () => {
     }
   ];
 
+  console.log("profile:", profile[0].gitHubURL);
   return (
     <div>
       {profile[0] ? (
@@ -56,7 +57,7 @@ const Home = () => {
           </p>
           <div className="flex text-gray-500 dark:text-white justify-evenly py-8 lg:py-16  text-3xl w-full md:w-1/3">
             <a
-              href={profile.linkedInURL}
+              href={profile[0].linkedInURL}
               className="cursor-pointer duration-300 hover:text-rose-600"
               target="_blank"
               rel="noopener noreferrer"
@@ -64,7 +65,7 @@ const Home = () => {
               <FaLinkedin />
             </a>
             <a
-              href={profile.gitHubURL}
+              href={profile[0].gitHubURL}
               className="cursor-pointer duration-300 hover:text-rose-600"
               target="_blank"
               rel="noopener noreferrer"
