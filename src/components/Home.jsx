@@ -56,7 +56,7 @@ const Home = () => {
           </p>
           <div className="flex text-gray-500 dark:text-white justify-evenly py-8 lg:py-16  text-3xl w-full md:w-1/3">
             <a
-              href={profile.linkedInUrl}
+              href={profile.linkedInURL}
               className="cursor-pointer duration-300 hover:text-rose-600"
               target="_blank"
               rel="noopener noreferrer"
@@ -64,7 +64,7 @@ const Home = () => {
               <FaLinkedin />
             </a>
             <a
-              href={profile.gitHubUrl}
+              href={profile.gitHubURL}
               className="cursor-pointer duration-300 hover:text-rose-600"
               target="_blank"
               rel="noopener noreferrer"
