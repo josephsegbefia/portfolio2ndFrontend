@@ -43,7 +43,7 @@ const Home = () => {
     }
   ];
 
-  console.log("profile:", profile[0].gitHubURL);
+  // console.log("profile:", profile[0].gitHubURL);
   return (
     <div>
       {profile[0] ? (
@@ -89,7 +89,7 @@ const Home = () => {
             />
           </div>
           <Section title="Skills:" subtitle="Ever growing skills list">
-            <div className="justify-center grid gap-4 lg:gap-3 lg:grid-cols-5 mt-5 md:grid-cols-3 sm:grid-cols-2">
+            <div className="justify-center grid gap-4 lg:gap-3 lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 mt-5">
               {profile &&
                 profile[0].skills.map((skill, index) => (
                   <p
